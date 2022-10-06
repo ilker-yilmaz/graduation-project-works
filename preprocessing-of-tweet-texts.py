@@ -1,7 +1,7 @@
 import re
 import pandas as pd
 
-df = pd.read_csv('tweets_df3.csv')  # read the csv file
+df = pd.read_csv('datasets/tweets_df3.csv')  # read the csv file
 
 df['Text'] = df['Text'].str.replace('#\S+', '')  # delete hashtags
 df['Text'] = df['Text'].str.replace('@\S+', '')  # delete mentions
