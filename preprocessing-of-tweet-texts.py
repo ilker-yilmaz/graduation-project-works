@@ -1,7 +1,7 @@
 import re
 import pandas as pd
 
-df = pd.read_csv('trial-dataset.csv')  # read the csv file
+df = pd.read_csv('datasets/trial-dataset.csv')  # read the csv file
 
 df['Text'] = df['Text'].str.replace('#\S+', '',regex=True)  # delete hashtags
 df['Text'] = df['Text'].str.replace('@\S+', '',regex=True)  # delete mentions
