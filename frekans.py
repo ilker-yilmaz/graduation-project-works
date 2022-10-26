@@ -3,6 +3,7 @@ import pandas as pd
 df = pd.read_csv('datasets/big-dataset-preprocessed-2.csv')  # read the csv file
 
 print("Verisetinde hangi kelime kaç defa tekrar ediyor:")
+print(df['Text'].str.split(expand=True).stack().value_counts())
 # print all words and their frequencies
 # for word in df['Text'].str.split(expand=True).stack().value_counts().index:
 #     print(word, df['Text'].str.split(expand=True).stack().value_counts()[word])
